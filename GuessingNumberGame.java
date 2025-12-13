@@ -64,3 +64,24 @@ public class GuessingNumberGame {
         guessingNumberGame();
     }
 }
+
+
+// ANSWER
+// A number is chosen between 1 and 100.
+// You have 5 attempts per round to guess the correct number.
+// Enter your guess: 20
+// The number is greater than 20
+// Enter your guess: 50
+// The number is less than 50
+// Enter your guess: 40
+// The number is greater than 40
+// Enter your guess: 45
+// The number is greater than 45
+// Enter your guess: 46
+// The number is greater than 46
+// You have used all 5 attempts.
+// Do you want to continue guessing? (yes/no): yes
+// Enter your guess: 47
+// The number is greater than 47
+// Enter your guess: 48
+// Congratulations! You guessed the correct number in 7 attempts.
