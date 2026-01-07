@@ -1,5 +1,3 @@
-// A simple Java program to demonstrate
-// Tic-Tac-Toe Game
 import java.util.*;
 
 public class TIC_TAC_TOE {
@@ -7,7 +5,6 @@ public class TIC_TAC_TOE {
     static String[] board;
     static String turn;
 
-    // CheckWinner method will decide the winner
     static String checkWinner() {
         for (int a = 0; a < 8; a++) {
             String line = null;
@@ -39,12 +36,10 @@ public class TIC_TAC_TOE {
                     break;
             }
 
-            // For X winner
             if (line.equals("XXX")) {
                 return "X";
             }
 
-            // For O winner
             else if (line.equals("OOO")) {
                 return "O";
             }
@@ -62,7 +57,6 @@ public class TIC_TAC_TOE {
         return null;
     }
 
-    // To print the board
     static void printBoard() {
         System.out.println("|---|---|---|");
         System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
@@ -93,17 +87,14 @@ public class TIC_TAC_TOE {
             try {
                 numInput = in.nextInt();
 
-                // Check range
                 if (!(numInput > 0 && numInput <= 9)) {
                     System.out.println("Invalid input; re-enter slot number:");
                     continue;
                 }
 
-                // Check if slot is available
                 if (board[numInput - 1].equals(String.valueOf(numInput))) {
                     board[numInput - 1] = turn;
 
-                    // Toggle turn
                     turn = turn.equals("X") ? "O" : "X";
 
                     printBoard();
@@ -114,11 +105,10 @@ public class TIC_TAC_TOE {
 
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input; re-enter slot number:");
-                in.nextLine(); // Consume invalid input to prevent infinite loop
+                in.nextLine(); 
             }
         }
 
-        // Final result
         if (winner.equalsIgnoreCase("draw")) {
             System.out.println("It's a draw! Thanks for playing.");
         } else {
